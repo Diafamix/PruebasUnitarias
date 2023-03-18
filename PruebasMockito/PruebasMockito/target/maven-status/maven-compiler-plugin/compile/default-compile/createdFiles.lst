@@ -1,0 +1,6 @@
+org\example\services\IExamenService.class
+org\example\App.class
+org\example\daos\Impl\ExamenRepositoryImpl.class
+org\example\models\Examen.class
+org\example\services\impl\ExamenServiceImpl.class
+org\example\daos\IExamenRepositorio.class
