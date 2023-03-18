@@ -2,6 +2,7 @@ package org.example;
 
 
 import org.example.exceptions.DineroInsuficienteException;
+import org.example.models.Banco;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -72,5 +73,49 @@ class CuentasTest {
         String esperado = "Dinero Insuficiente";
 
         assertEquals(esperado, actual);
+    }
+
+    @Test
+    void testTransferirDineroCuentas() {
+        Cuentas cuenta1 = new Cuentas("Jhon Doe", new BigDecimal("2500"));
+        Cuentas cuenta2 = new Cuentas("Andres", new BigDecimal("1500.8989"));
+
+        Banco banco = new Banco();
+        banco.setNombre("Banco del Estado");
+        banco.transferir(cuenta2, cuenta1, new BigDecimal(500));
+        assertEquals("1000.8989", cuenta2.getSaldo().toPlainString());
+        assertEquals("3000", cuenta1.getSaldo().toPlainString());
+    }
+
+    @Test
+    void testRelacionBancoCuentas() {
+        Cuentas cuenta1 = new Cuentas("Jhon Doe", new BigDecimal("2500"));
+        Cuentas cuenta2 = new Cuentas("Andres", new BigDecimal("1500.8989"));
+
+        Banco banco = new Banco();
+        banco.addCuenta(cuenta1);
+        banco.addCuenta(cuenta2);
+        banco.setNombre("Banco del Estado");
+
+        banco.transferir(cuenta2, cuenta1, new BigDecimal(500));
+        assertEquals("1000.8989", cuenta2.getSaldo().toPlainString());
+        assertEquals("3000", cuenta1.getSaldo().toPlainString());
+        // Comprueba que le banco tiene dos cuentas
+        assertEquals(2, banco.getCuentas().size());
+        assertEquals("Banco del Estado", cuenta1.getBanco().getNombre());
+
+        // Validar que la cuenta pertenezca a un usuario
+        assertEquals("Andres", banco.getCuentas().stream()
+                .filter(c -> c.getPersona().equals("Andres"))
+                .findFirst()
+                .get().getPersona());
+
+        assertTrue(banco.getCuentas().stream()
+                .filter(c -> c.getPersona().equals("Andres"))
+                .findFirst()
+                .isPresent());
+
+        assertTrue(banco.getCuentas().stream()
+                .anyMatch(c -> c.getPersona().equals("Andres"))sas);
     }
 }

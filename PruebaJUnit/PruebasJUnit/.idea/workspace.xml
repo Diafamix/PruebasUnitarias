@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9ffdf02-daa3-42b8-8de4-a74ce8b759e6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Cuentas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/DineroInsuficienteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/CuentasTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PruebasMockito/PruebasMockito/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PruebasMockito/PruebasMockito/src/main/java/org/example/App.java" afterDir="false" />
+    <list default="true" id="d9ffdf02-daa3-42b8-8de4-a74ce8b759e6" name="Changes" comment="Test JUnit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Banco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cuentas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cuentas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CuentasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/CuentasTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +42,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": ""
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "D:/Workspace/ClasesDiego/Practica2/Practica2"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -61,7 +54,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in PruebasJUnit">
+  <component name="RunManager" selected="JUnit.CuentasTest.testRelacionBancoCuentas">
     <configuration name="All in PruebasJUnit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PruebasJUnit" />
       <option name="PACKAGE_NAME" value="" />
@@ -101,7 +94,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CuentasTest.testCreditoCuenta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CuentasTest.testRelacionBancoCuentas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PruebasJUnit" />
       <extension name="coverage">
         <pattern>
@@ -111,13 +104,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.CuentasTest" />
-      <option name="METHOD_NAME" value="testCreditoCuenta" />
+      <option name="METHOD_NAME" value="testRelacionBancoCuentas" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CuentasTest.testDebitoCUenta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CuentasTest.testTransferirDineroCuentas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PruebasJUnit" />
       <extension name="coverage">
         <pattern>
@@ -127,7 +120,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.CuentasTest" />
-      <option name="METHOD_NAME" value="testDebitoCUenta" />
+      <option name="METHOD_NAME" value="testTransferirDineroCuentas" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -135,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CuentasTest.testRelacionBancoCuentas" />
+        <item itemvalue="JUnit.CuentasTest.testTransferirDineroCuentas" />
         <item itemvalue="JUnit.All in PruebasJUnit" />
         <item itemvalue="JUnit.CuentasTest.dineroInsuficienteExceptionCuenta" />
         <item itemvalue="JUnit.CuentasTest" />
-        <item itemvalue="JUnit.CuentasTest.testCreditoCuenta" />
-        <item itemvalue="JUnit.CuentasTest.testDebitoCUenta" />
       </list>
     </recent_temporary>
   </component>
@@ -151,8 +144,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678567610512</updated>
-      <workItem from="1678567611923" duration="6758000" />
+      <workItem from="1678567611923" duration="8940000" />
+      <workItem from="1679085237160" duration="192000" />
     </task>
+    <task id="LOCAL-00001" summary="Test JUnit">
+      <created>1678652518434</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678652518434</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +170,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Test JUnit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test JUnit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PruebasJUnit$CuentasTest_testNombreCuenta.ic" NAME="CuentasTest.testNombreCuenta Coverage Results" MODIFIED="1678568916919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
